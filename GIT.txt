@@ -200,3 +200,5 @@ CRIAR UM BRANCH A PARTIR DE UM PULL REQUEST - para testar antes de aceitar o PR
 
 git fetch origin pull/<numeroPullRequest>/head:<nomeBranch>
 git checkout <nomeBranch>
+
+**************************************************************************************************************************************************
