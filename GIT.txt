@@ -1,0 +1,202 @@
+GIT
+
+Verificar historico:
+
+git log
+git log --oneline
+git log -2
+git log -3
+
+**************************************************************************************************************************************************
+
+Corrigir o comentário do último commit:
+
+git commit ammend -m
+
+**************************************************************************************************************************************************
+
+CRIAR REPOSITORIO NO GITHUB
+
+> terminal na pasta do projeto local:
+
+git remote add origin <LinkDoRepositorioCriadoNoGitHub>
+
+**************************************************************************************************************************************************
+
+Atualizar o arquivo para a ultima versão comitada:
+
+git checkout <arquivo>
+
+**************************************************************************************************************************************************
+
+VOLTAR PARA UM COMMIT ESPECIFICO
+
+git checkout <commitID>
+
+**************************************************************************************************************************************************
+
+Atualizar o projeto todo a partir do último commit
+
+git reset HEAD --hard
+
+**************************************************************************************************************************************************
+
+VOLTAR O COMMIT REALIZADO PARA O ANTERIOR
+
+git reset HEAD^ --hard
+
+**************************************************************************************************************************************************
+
+EXCLUIR ARQUIVOS GIT AUTOMATICAMENTE DO PROJETO
+
+File>Preferences>Settings>Exclude Files> **/.git
+
+**************************************************************************************************************************************************
+
+CONSULTAR BRANCHS DO PROJETO 
+
+git branch
+
+**************************************************************************************************************************************************
+
+CRIAR BRANCH
+
+git branch <nomeBranch>
+
+**************************************************************************************************************************************************
+
+FAZER MERGE
+
+git merge <nomeBranch>
+
+**************************************************************************************************************************************************
+
+MUDAR A BRANCH QUE ESTA DESENVOLVIDO O CODIGO
+
+git checkout <nomeDoBranch>
+
+**************************************************************************************************************************************************
+
+DELETAR BRANCH
+
+git branch -d <nomeBranch>
+
+**************************************************************************************************************************************************
+
+CRIAR NOVO BRANCH E AO MESMO TEMPO FAZER ACESSO A ELE
+
+git checkout -b <nomeBranch>
+
+**************************************************************************************************************************************************
+
+TRAZER AS ALTERAÇÕES DE UM REPOSITORIO PARA O CLONE - sem adicionar ao projeto (precisa fazer rebase depois)
+
+git fetch
+git rebase
+
+**************************************************************************************************************************************************
+
+TRAZER AS ALTERAÇÕES DE UM REPOSITORIO PARA O CLONE E JÁ FAZER COMMIT
+
+git pull
+
+**************************************************************************************************************************************************
+
+CRIAR UM REPOSITORIO BARE
+
+git init --bare
+
+**************************************************************************************************************************************************
+
+CLONAR UM REPOSITORIO BARE -- criar o diretorio antes e fazer o seguinte:
+
+git clone <caminhoDoRepositorioBare> .
+
+**************************************************************************************************************************************************
+
+CRIAR UM BRANCH E AO MESMO TEMPO JA  ALTERANAR PARA ELE
+
+git switch -c <nomeBranch>
+
+
+**************************************************************************************************************************************************
+
+RENOMEAR O BRANCH PARA MAIN
+
+git branch -M main
+
+**************************************************************************************************************************************************
+
+VERIFICAR SE EXISTEM REPOSITORIS REMOTOS
+
+git remote -v
+
+**************************************************************************************************************************************************
+
+NÃO PEDIR MAIS USUÁRIO E SENHA DO GITHUB - armazena as configurações de usuário e senha no projeto
+
+git config credential.helper store
+
+**************************************************************************************************************************************************
+
+REMOVER CONFIGURAÇÃO GLOBAL E LOCAL (sem essas config, não é possível fazer push)
+
+git config --global --unset credential.helper
+git config  --unset credential.helper
+
+**************************************************************************************************************************************************
+
+CAS HAJA FALHA DE AUTENTICAÇÃO POR CONFLITO DE USUÁRIOS NO MESMO GIT LOCAL
+
+git config --unset credentia.helper
+git config credential.helper store
+git remote set-url origin <linkDoRepositorio>
+
+
+**************************************************************************************************************************************************
+
+VOLTAR OS ARQUIVOS DO PROJETO AO ESTADO ORIGINAL (como se fosse dar um 'undo pending changes')
+
+git checkout -- .
+
+**************************************************************************************************************************************************
+
+VOLTAR UM ARQUIVO ESPECÍFICO AO ESTADO ORIGINAL
+
+git checkout -- <arquivo.extensao>
+
+**************************************************************************************************************************************************
+
+VOLTAR O PROJETO AO FORMATO QUE ESTÁ NO GIT
+
+git checkout HEAD -- .
+
+OU
+
+git checkout HEAD -- <arquivo.extensao>
+
+
+**************************************************************************************************************************************************
+
+REVERTER UM COMMIT ESPECÍFICO
+
+git revert <commitID>
+
+**************************************************************************************************************************************************
+
+RESETAR UM COMMIT (vai desfazer o commit e voltar ao estágio anterior a ele)
+
+git reset HEAD~1
+
+**************************************************************************************************************************************************
+
+COMITAR E FECHAR AUTOMATICAMENTE UMA ISSUE
+
+no comentário do commit, colocar o termo Close #<numeroDaIssue>
+
+**************************************************************************************************************************************************
+
+CRIAR UM BRANCH A PARTIR DE UM PULL REQUEST - para testar antes de aceitar o PR
+
+git fetch origin pull/<numeroPullRequest>/head:<nomeBranch>
+git checkout <nomeBranch>
