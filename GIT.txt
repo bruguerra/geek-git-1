@@ -23,6 +23,11 @@ git remote add origin <LinkDoRepositorioCriadoNoGitHub>
 
 **************************************************************************************************************************************************
 
+DEFINIR A ORIGEM DO PROJETO
+
+git remote set-url origin <LinkDoRepositorioGit>
+**************************************************************************************************************************************************
+
 Atualizar o arquivo para a ultima versão comitada:
 
 git checkout <arquivo>
