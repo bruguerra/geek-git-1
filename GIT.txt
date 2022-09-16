@@ -261,3 +261,7 @@ DESFAZER O COMMIT SEM DESFAZER AS ALTERAÇÕES
 
 git reset --soft HEAD~1
 **************************************************************************************************************************************************
+
+FORÇAR UM PUSH NO REPOSITORIO REMOTO (IGNORAR O QUE ESTA LA E MANDAR O MEU)
+
+git push -f origin <branch>
