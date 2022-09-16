@@ -201,6 +201,12 @@ git remote set-url origin <linkDoRepositorio>
 
 **************************************************************************************************************************************************
 
+TROCAR O REPOSITORIO REMOTO DO PROJETO
+
+git remote set-url origin <linkDoRepositorio>
+
+**************************************************************************************************************************************************
+
 VOLTAR OS ARQUIVOS DO PROJETO AO ESTADO ORIGINAL (como se fosse dar um 'undo pending changes')
 
 git checkout -- .
