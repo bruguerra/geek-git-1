@@ -234,3 +234,9 @@ git fetch origin pull/<numeroPullRequest>/head:<nomeBranch>
 git checkout <nomeBranch>
 
 **************************************************************************************************************************************************
+DESFAZER ALTERAÇÕES NÃO SALVAS
+
+git status
+git reset
+git clean -df
+git checkout -- .
